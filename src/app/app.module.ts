@@ -8,10 +8,12 @@ import {MaterialModule} from './modules/material/material.module';
 
 // Importacion de Servicios
 import {ServicioService} from './services/servicio.service';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
