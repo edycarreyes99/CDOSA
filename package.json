@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-prod": "ng build --optimization=true --prod=true",
-    "delete-environments": "sudo rm -R src/environments",
+    "delete-environments": "rm -R src/environments",
     "gen-environments": "mkdir src/environments; touch src/environments/environment.ts; touch src/environments/environment.prod.ts",
     "copy-environments": "echo $ENVIRONMENT >> src/environments/environment.ts; echo $ENVIRONMENTPROD >> src/environments/environment.prod.ts",
     "test": "ng test",
