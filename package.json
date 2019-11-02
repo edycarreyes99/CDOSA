@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-prod": "ng build --optimization=true --prod=true",
-    "environments": "ls; echo $ENVIRONMENT >> src/environments/environment.ts; echo $ENVIRONMENTPROD >> src/environments/environment.prod.ts",
+    "environments": "mkdir src/environments; touch src/environments/environment.ts; touch src/environments/environment.ts; echo $ENVIRONMENT >> src/environments/environment.ts; echo $ENVIRONMENTPROD >> src/environments/environment.prod.ts",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
