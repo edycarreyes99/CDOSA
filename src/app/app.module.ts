@@ -26,11 +26,13 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 
 
 import {LoginComponent} from './pages/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
