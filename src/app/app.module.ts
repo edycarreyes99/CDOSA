@@ -26,8 +26,8 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 
 
 import {LoginComponent} from './pages/login/login.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {SidenavComponent} from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +61,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MaterialModule
   ],
   providers: [
-    ServicioService
+    ServicioService,
+    NavbarComponent,
+    SidenavComponent
   ],
   bootstrap: [AppComponent]
 })
