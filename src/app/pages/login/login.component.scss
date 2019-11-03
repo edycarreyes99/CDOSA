@@ -1,10 +1,11 @@
 .login-page {
   background-color: #f2f7fe;
+  overflow: hidden;
 
   #hero-technology {
     text-align: center;
     background-size: cover;
-    background: url('../../../assets/backgroundLoginFireBucket.png') center;
+    background: url('../../../assets/SVG/backgroundLoginFireBucket.svg') center;
   }
 
   .example-form {
