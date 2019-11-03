@@ -28,13 +28,15 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {LoginComponent} from './pages/login/login.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SidenavComponent} from './components/sidenav/sidenav.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
