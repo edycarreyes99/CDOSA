@@ -29,6 +29,7 @@ import {LoginComponent} from './pages/login/login.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SidenavComponent} from './components/sidenav/sidenav.component';
 import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HomeComponent } from './pages/home/home.component';
     LoginComponent,
     NavbarComponent,
     SidenavComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
