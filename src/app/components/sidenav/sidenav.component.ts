@@ -11,7 +11,7 @@ export class SidenavComponent implements OnInit {
   sidenavAbierta: boolean;
 
   constructor(
-    private servicio: ServicioService,
+    public servicio: ServicioService,
   ) {
   }
 
