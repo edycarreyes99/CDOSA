@@ -4,6 +4,7 @@ import {Injectable} from '@angular/core';
 import {ToastrService, IndividualConfig} from 'ngx-toastr';
 import {User} from 'firebase';
 import {AngularFireAuth} from '@angular/fire/auth';
+import {Router} from '@angular/router';
 
 
 @Injectable({
@@ -11,9 +12,13 @@ import {AngularFireAuth} from '@angular/fire/auth';
 })
 export class ServicioService {
 
+  mostrarSidenavYNavbar = false;
+  mostrarNavbar = false;
+
   constructor(
     public toast: ToastrService,
     public auth: AngularFireAuth,
+    public router: Router
   ) {
   }
 
@@ -44,5 +49,20 @@ export class ServicioService {
         });
     });
   }
+
+  // funcion que determinara la ruta para asi ocultar o mostrar el sidenav y el navbar
+  determinarRuta(): string {
+    if (this.router.url === '/' || this.router.url === 'login') {
+      this.mostrarSidenavYNavbar = false;
+    }
+    return this.router.url;
+  }
+
+  // funcion para realizar las navegaciones entre las rutas de la plataforma
+  navegar(ruta: string) {
+    this.router.navigate([`/${ruta}`]);
+    this.determinarRuta();
+  }
+
 
 }

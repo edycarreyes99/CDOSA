@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {ServicioService} from '../../services/servicio.service';
 import {SidenavComponent} from '../../components/sidenav/sidenav.component';
+import {NavbarComponent} from '../../components/navbar/navbar.component';
 
 @Component({
   selector: 'app-login',
@@ -21,12 +22,15 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public servicio: ServicioService,
-    public sidenav: SidenavComponent
+    public sidenav: SidenavComponent,
+    public navbar: NavbarComponent
   ) {
+    this.sidenav.sidenavAbierta = false;
+    this.servicio.mostrarNavbar = false;
+    this.navbar.actualizarTitulo();
   }
 
   ngOnInit() {
-    this.sidenav.sidenavAbierta = false;
   }
 
   // metodo para login
@@ -34,7 +38,7 @@ export class LoginComponent implements OnInit {
     if (this.verificarDatosParaLogin()) {
       this.servicio.login(this.loginEmailFormControl.value.toString(), this.loginPasswordFormControl.value.toString()).then((user) => {
         this.servicio.newToast(1, '¡Inicio de Sesión Correcto!', `¡Bienvenido ${user.displayName}!`);
-        // this.servicio.navegar('home');
+        this.servicio.navegar('home');
         console.log(user.uid);
       }).catch(e => {
         console.error(e);
