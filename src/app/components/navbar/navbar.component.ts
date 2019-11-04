@@ -50,8 +50,8 @@ export class NavbarComponent implements OnInit {
     switch (titulo) {
       case '':
         return 'Login';
-      case 'home':
-        return 'Inicio';
+      case 'inventario':
+        return 'Inventario';
       default:
         return '';
     }

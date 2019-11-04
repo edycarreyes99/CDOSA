@@ -28,7 +28,7 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {LoginComponent} from './pages/login/login.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SidenavComponent} from './components/sidenav/sidenav.component';
-import { HomeComponent } from './pages/home/home.component';
+import { InventarioComponent } from './pages/inventario/inventario.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
@@ -37,7 +37,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     LoginComponent,
     NavbarComponent,
     SidenavComponent,
-    HomeComponent,
+    InventarioComponent,
     NotFoundComponent
   ],
   imports: [

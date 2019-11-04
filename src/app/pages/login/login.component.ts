@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     if (this.verificarDatosParaLogin()) {
       this.servicio.login(this.loginEmailFormControl.value.toString(), this.loginPasswordFormControl.value.toString()).then((user) => {
         this.servicio.newToast(1, '¡Inicio de Sesión Correcto!', `¡Bienvenido ${user.displayName}!`);
-        this.servicio.navegar('home');
+        this.servicio.navegar('inventario');
         console.log(user.uid);
       }).catch(e => {
         console.error(e);

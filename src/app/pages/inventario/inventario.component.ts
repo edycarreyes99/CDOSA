@@ -4,11 +4,11 @@ import {NavbarComponent} from '../../components/navbar/navbar.component';
 import {ServicioService} from '../../services/servicio.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-inventario',
+  templateUrl: './inventario.component.html',
+  styleUrls: ['./inventario.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class InventarioComponent implements OnInit {
 
   constructor(
     public sidenav: SidenavComponent,
