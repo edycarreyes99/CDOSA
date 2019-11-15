@@ -28,8 +28,9 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {LoginComponent} from './pages/login/login.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SidenavComponent} from './components/sidenav/sidenav.component';
-import { InventarioComponent } from './pages/inventario/inventario.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import {InventarioComponent} from './pages/inventario/inventario.component';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
+import {InventarioTableComponent} from './components/tables/inventario-table/inventario-table.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     NavbarComponent,
     SidenavComponent,
     InventarioComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    InventarioTableComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
   providers: [
     ServicioService,
     NavbarComponent,
-    SidenavComponent
+    SidenavComponent,
+
+    // Tables components
+    InventarioTableComponent
   ],
   bootstrap: [AppComponent]
 })

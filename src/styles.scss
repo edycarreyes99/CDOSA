@@ -39,3 +39,12 @@ button:focus {
   -webkit-border-radius: 4px;
   border-radius: 4px
 }
+
+mat-dialog-container{
+  border-radius: 1rem !important;
+}
+
+mat-drawer{
+  border-style: none !important;
+}
+
