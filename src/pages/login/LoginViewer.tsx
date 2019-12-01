@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {isBrowser, isMobileOnly, isTablet} from 'react-device-detect';
 import LoginBrowserView from './views/LoginBrowserView';
 import LoginMobileView from './views/LoginMobileView';
-import LoginTabletView from './views/LoginTabletView'
+import LoginTabletView from './views/LoginTabletView';
 
 
 class LoginViewer extends Component {
