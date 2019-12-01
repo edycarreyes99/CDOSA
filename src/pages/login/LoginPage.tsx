@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './LoginPage.scss';
-import Viewer from "./Viewer";
+import LoginViewer from "./LoginViewer";
 
 
 class LoginPage extends Component {
@@ -13,7 +13,7 @@ class LoginPage extends Component {
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <div className='login-page d-flex justify-content-center align-items-center'>
-                <Viewer/>
+                <LoginViewer/>
             </div>
         );
     }

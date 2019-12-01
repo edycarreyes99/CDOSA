@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {isBrowser, isMobileOnly, isTablet} from 'react-device-detect';
+import {isBrowser, isMobileOnly} from 'react-device-detect';
 import Browser from './views/BrowserView';
-import Mobile from "./views/MobileView";
+import Mobile from './views/MobileView';
+import Tablet from './views/TabletView'
 
 
-class Viewer extends Component {
+class LoginViewer extends Component {
     constructor(props: any) {
         super(props);
         this.state = {};
@@ -12,9 +13,9 @@ class Viewer extends Component {
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
-            isBrowser ? <Browser/> : isMobileOnly ? <Mobile/> : isTablet ? <Browser/> : null
+            isBrowser ? <Browser/> : isMobileOnly ? <Mobile/> : <Tablet/>
         );
     }
 }
 
-export default Viewer;
+export default LoginViewer
