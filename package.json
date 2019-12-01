@@ -1,61 +1,36 @@
 {
   "name": "cdosa",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "gen-environments": "mkdir src/environments; touch src/environments/environment.ts; touch src/environments/environment.prod.ts",
-    "copy-environments": "echo $ENVIRONMENT >> src/environments/environment.ts; echo $ENVIRONMENTPROD >> src/environments/environment.prod.ts",
-    "build-prod": "ng build --optimization=true --prod=true",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.13",
-    "@angular/cdk": "~8.2.3",
-    "@angular/common": "~8.2.13",
-    "@angular/compiler": "~8.2.13",
-    "@angular/core": "~8.2.13",
-    "@angular/fire": "^5.2.1",
-    "@angular/forms": "~8.2.13",
-    "@angular/material": "^8.2.3",
-    "@angular/platform-browser": "~8.2.13",
-    "@angular/platform-browser-dynamic": "~8.2.13",
-    "@angular/router": "~8.2.13",
-    "babel": "^6.23.0",
-    "bootstrap": "^4.3.1",
-    "firebase": "^7.2.3",
-    "hammerjs": "^2.0.8",
-    "jquery": "^3.4.1",
-    "ngx-toastr": "^11.2.0",
-    "popper.js": "^1.16.0",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.14",
+    "@types/react": "16.9.13",
+    "@types/react-dom": "16.9.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.2.0",
+    "typescript": "3.7.2"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.17",
-    "@angular/cli": "~8.3.17",
-    "@angular/compiler-cli": "~8.2.13",
-    "@angular/language-service": "~8.2.13",
-    "@types/jasmine": "~3.3.8",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
-    "babel-cli": "^6.26.0",
-    "codelyzer": "^5.0.0",
-    "jasmine-core": "~3.4.0",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.1.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
