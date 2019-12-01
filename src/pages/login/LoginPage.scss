@@ -5,6 +5,17 @@
   overflow: hidden;
   min-height: 100vh;
 
+  .MuiOutlinedInput-root {
+    border-radius: 25px !important;
+  }
+
+  .btn {
+    border-radius: 25px !important;
+    width: 500px !important;
+    height: 3.4rem !important;
+    font-size: 1.3rem !important;
+  }
+
   .svgStyle {
     max-height: 100vh;
     max-width: 100%;
