@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import './LoginPage.scss';
-import Viewer from "./Viewer";
+import {isBrowser, isMobileOnly, isTablet} from 'react-device-detect';
+import Browser from './views/BrowserView';
+import Mobile from "./views/MobileView";
 
 
-class LoginPage extends Component {
-
+class Viewer extends Component {
     constructor(props: any) {
         super(props);
         this.state = {};
@@ -12,11 +12,9 @@ class LoginPage extends Component {
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
-            <div className='login-page d-flex justify-content-center align-items-center'>
-                <Viewer/>
-            </div>
+            isBrowser ? <Browser/> : isMobileOnly ? <Mobile/> : isTablet ? <Browser/> : null
         );
     }
 }
 
-export default LoginPage;
+export default Viewer;
