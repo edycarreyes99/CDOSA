@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+
+.login-page {
+  background-color: #f2f7fe;
+  overflow: hidden;
+  min-height: 100vh;
+
+  .svgStyle {
+    max-height: 100vh;
+    max-width: 100%;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}
