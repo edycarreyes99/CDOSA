@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {isBrowser, isMobileOnly} from 'react-device-detect';
-import Browser from './views/BrowserView';
-import Mobile from './views/MobileView';
-import Tablet from './views/TabletView'
+import {isBrowser, isMobileOnly, isTablet} from 'react-device-detect';
+import LoginBrowserView from './views/LoginBrowserView';
+import LoginMobileView from './views/LoginMobileView';
+import LoginTabletView from './views/LoginTabletView'
 
 
 class LoginViewer extends Component {
@@ -13,7 +13,7 @@ class LoginViewer extends Component {
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
-            isBrowser ? <Browser/> : isMobileOnly ? <Mobile/> : <Tablet/>
+            isBrowser ? <LoginBrowserView/> : isTablet ? <LoginTabletView/> : <LoginMobileView/>
         );
     }
 }

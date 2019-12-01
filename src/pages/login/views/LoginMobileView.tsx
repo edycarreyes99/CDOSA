@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {MobileOnlyView} from "react-device-detect";
 
-class Mobile extends Component {
+class LoginMobileView extends Component {
     constructor(props: any) {
         super(props);
         this.state = {};
@@ -29,4 +29,4 @@ class Mobile extends Component {
     }
 }
 
-export default Mobile;
+export default LoginMobileView;

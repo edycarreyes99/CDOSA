@@ -3,7 +3,7 @@ import {TabletView} from "react-device-detect";
 import {Col, Row} from "reactstrap";
 import LoginImage from "../../../assets/images/SVG/backgroundLogin2.svg";
 
-class Tablet extends Component {
+class LoginTabletView extends Component {
     constructor(props: any) {
         super(props);
         this.state = {};
@@ -36,4 +36,4 @@ class Tablet extends Component {
     }
 }
 
-export default Tablet;
+export default LoginTabletView;

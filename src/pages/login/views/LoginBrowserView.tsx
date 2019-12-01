@@ -3,7 +3,7 @@ import {BrowserView} from "react-device-detect";
 import {Col, Row} from "reactstrap";
 import LoginImage from "../../../assets/images/SVG/backgroundLogin2.svg";
 
-class Browser extends Component {
+class LoginBrowserView extends Component {
     constructor(props: any) {
         super(props);
         this.state = {};
@@ -36,4 +36,4 @@ class Browser extends Component {
     }
 }
 
-export default Browser;
+export default LoginBrowserView;
