@@ -14,8 +14,6 @@ deploy-prod:
     - master
   script:
     - yarn
-    - yarn run gen-environments
-    - yarn run copy-environments
-    - yarn run build-prod
+    - yarn run build
     - firebase use firecodes-cdosa --token $FIREBASE_TOKEN
     - firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token $FIREBASE_TOKEN
