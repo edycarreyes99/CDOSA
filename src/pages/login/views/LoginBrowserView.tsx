@@ -29,13 +29,13 @@ class LoginBrowserView extends Component {
                             <Container fluid={true} className='d-flex justify-content-center align-items-center'>
                                 <FormGroup>
                                     <TextField type="email" label="Email" variant="outlined"
-                                               style={{width: 500}} className='mb-2'/>
+                                               style={{width: 400}} className='mb-2'/>
                                     <br/>
                                     <TextField type="password" label="Contraseña" variant="outlined"
-                                               style={{width: 500}} className='mt-2'/>
+                                               style={{width: 400}} className='mt-2'/>
                                 </FormGroup>
                             </Container>
-                            <Container fluid={true} className='d-flex justify-content-center align-items-center mt-5'>
+                            <Container fluid={true} className='d-flex justify-content-center align-items-center mt-4'>
                                 <Button type="submit" color='danger' className="text-light mx-auto">
                                     Iniciar Sesión
                                 </Button>
