@@ -2,8 +2,6 @@ import FirebaseContext from "./FirebaseContext";
 import app from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from "./firebaseConfig";
-import UserCredential = firebase.auth.UserCredential;
-import {userInfo} from "os";
 
 class FirebaseService {
     auth: app.auth.Auth;
@@ -13,11 +11,11 @@ class FirebaseService {
         this.auth = app.auth();
     }
 
-    public async login(email: string, password: string): Promise<UserCredential> {
+    public async login(email: string, password: string): Promise<app.auth.UserCredential> {
         return await this.auth.signInWithEmailAndPassword(email, password).then(user => user);
     }
 
-    public async signup(email: string, password: string): Promise<UserCredential> {
+    public async signup(email: string, password: string): Promise<app.auth.UserCredential> {
         return await this.auth.createUserWithEmailAndPassword(email, password).then(user => user);
     }
 

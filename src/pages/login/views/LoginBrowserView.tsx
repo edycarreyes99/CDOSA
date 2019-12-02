@@ -4,10 +4,18 @@ import {Button, Col, Container, Form, FormGroup, Row} from "reactstrap";
 import LoginImage from "../../../assets/images/SVG/backgroundLogin2.svg";
 import {TextField} from "@material-ui/core";
 
+
+// Estado inicial de la vista
+const INITIAL_STATE = {
+    email: '',
+    password: '',
+    error: null,
+};
+
 class LoginBrowserView extends Component {
     constructor(props: any) {
         super(props);
-        this.state = {};
+        this.state = {...INITIAL_STATE};
     }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
