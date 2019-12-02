@@ -23,7 +23,7 @@ class LoginBrowserView extends Component {
                             </Container>
                             <Container fluid={true} className='d-flex justify-content-center align-items-center'>
                                 <h4 className="text-secondary mb-5">
-                                    Inicia Sesión con tu cuenta.
+                                    Inicia sesión con tu cuenta.
                                 </h4>
                             </Container>
                             <Container fluid={true} className='d-flex justify-content-center align-items-center'>
