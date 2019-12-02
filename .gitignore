@@ -66,6 +66,8 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+src/services/firebase/firebaseConfig.tsx
 
 npm-debug.log*
 yarn-debug.log*
