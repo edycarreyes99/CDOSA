@@ -1,10 +1,9 @@
 import FirebaseContext from "./FirebaseContext";
 import app from 'firebase/app';
 import 'firebase/auth';
-import firebaseDevConfig from "./firebaseConfig";
 
-const firebaseProdConfig = {
-    apiKey: process.env.apiKey,
+const firebaseConfig = {
+    apiKey: process.env.APIKEY,
     authDomain: process.env.authDomain,
     databaseURL: process.env.databaseURL,
     projectId: process.env.projectId,
@@ -13,8 +12,6 @@ const firebaseProdConfig = {
     appID: process.env.appId,
     measurementId: process.env.measurementId
 };
-
-const firebaseConfig = process.env.NODE_ENV === 'production' ? firebaseProdConfig : firebaseDevConfig;
 
 class FirebaseService {
     auth: app.auth.Auth;
