@@ -3,19 +3,32 @@ import {BrowserView} from "react-device-detect";
 import {Button, Col, Container, Form, FormGroup, Row} from "reactstrap";
 import LoginImage from "../../../assets/images/SVG/backgroundLogin2.svg";
 import {TextField} from "@material-ui/core";
+import app from 'firebase/app';
 
+type props = {};
+type state = { email: string, password: string };
 
-// Estado inicial de la vista
-const INITIAL_STATE = {
-    email: '',
-    password: '',
-    error: null,
-};
-
-class LoginBrowserView extends Component {
+class LoginBrowserView extends Component<props, state> {
     constructor(props: any) {
         super(props);
-        this.state = {...INITIAL_STATE};
+        this.state = {email: '', password: ''};
+        this.login = this.login.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    public async login(email: string, password: string): Promise<app.auth.UserCredential> {
+        return await app.auth().signInWithEmailAndPassword(email, password).then(user => user);
+    }
+
+    async handleSubmit(event: any) {
+        event.preventDefault();
+        this.setState({email: event.target.email, password: event.target.password});
+        console.log("Email: " + this.state.email + " Pass: " + this.state.password);
+        try {
+            await this.login(this.state.email, this.state.password);
+        } catch (e) {
+            alert(e);
+        }
     }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
@@ -23,7 +36,7 @@ class LoginBrowserView extends Component {
             <BrowserView>
                 <Row cols={2}>
                     <Col sm={6} md={6} lg={6} xs={6} className='d-flex justify-content-center align-items-center'>
-                        <Form className='example-form'>
+                        <Form className='example-form' onSubmit={this.handleSubmit}>
                             <Container fluid={true} className='d-flex justify-content-center align-items-center'>
                                 <div className="display-3 text-dark mb-2">
                                     ¡Bienvenido!
@@ -37,10 +50,12 @@ class LoginBrowserView extends Component {
                             <Container fluid={true} className='d-flex justify-content-center align-items-center'>
                                 <FormGroup>
                                     <TextField type="email" label="Email" variant="outlined"
-                                               style={{width: 400}} className='mb-2'/>
+                                               style={{width: 400}} className='mb-2' name='email'
+                                               onChange={(event => this.setState({email: event.target.value}))}/>
                                     <br/>
                                     <TextField type="password" label="Contraseña" variant="outlined"
-                                               style={{width: 400}} className='mt-2'/>
+                                               style={{width: 400}} className='mt-2' name='password'
+                                               onChange={(event => this.setState({password: event.target.value}))}/>
                                 </FormGroup>
                             </Container>
                             <Container fluid={true} className='d-flex justify-content-center align-items-center mt-4'>
